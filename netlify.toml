@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build:public"
+  publish = "public-dist"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_VERSION = "22.14.0"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
